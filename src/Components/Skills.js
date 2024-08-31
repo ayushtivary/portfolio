@@ -6,7 +6,7 @@ import react from "../Assests/React.png";
 import git from "../Assests/Git.png";
 import aws from "../Assests/Aws.png";
 import node from "../Assests/Node.png";
-import { angularText, nodeText } from "../Utils/constants";
+import { angularText } from "../Utils/constants";
 import { pythonText } from "../Utils/constants";
 import { awstext } from "../Utils/constants";
 import { reactText } from "../Utils/constants";

@@ -83,6 +83,7 @@ const Experience = () => {
                 <img
                   className="w-30 h-40 px-[15%] py-5 justify-center text-center items-center"
                   src={geminilogo}
+                  alt="gemlogo"
                 />
                 <h1 className="text-2xl text-blue-200 font-bold  p-3 text-center">
                   2022 - Present

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { about } from "../Utils/constants";
 import img from "../Assests/profile.jpeg";
-import Skills from "./Skills";
 const Home = () => {
   const aboutText = about;
 

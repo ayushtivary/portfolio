@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { exp, reactPortfolio } from "../Utils/constants";
-import geminilogo from "../Assests/Gemini_Logo_2.1acba111.svg";
+import { reactPortfolio } from "../Utils/constants";
 import { cyber } from "../Utils/constants";
 import { V2 } from "../Utils/constants";
 import { python } from "../Utils/constants";
@@ -55,7 +54,6 @@ const Project = () => {
       rightObserver.disconnect();
     };
   });
-  const aboutText = exp;
   const cyberText = cyber;
   const V2Text = V2;
   return (

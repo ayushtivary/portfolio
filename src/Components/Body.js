@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
-import Header from "./Header";
+import React from "react";
 import Home from "./Home";
 import Experience from "./Experience";
 import ParticleBackground from "./ParticleBackground";
