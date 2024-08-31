@@ -5,6 +5,7 @@ import Experience from "./Experience";
 import ParticleBackground from "./ParticleBackground";
 import Skills from "./Skills";
 import Project from "./Poject";
+import Footer from "./Footer";
 
 const Body = () => {
   return (
@@ -17,6 +18,7 @@ const Body = () => {
       <Skills />
       <Experience />
       <Project />
+      <Footer />
     </div>
   );
 };
