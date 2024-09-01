@@ -27,3 +27,5 @@ export const reactNetflixGpt =
   "Worked on developing a Netflix clone using the TMDB API, where I integrated Google Gemini's GPT feature to enhance user interaction. The project utilized Redux for state management, custom hooks, Context API for efficient data handling, and advanced concepts like code optimization and memoization to ensure a seamless user experience.";
 export const reactPortfolio =
   "Built a portfolio website featuring Tailwind CSS and advanced React concepts, with a futuristic UI/UX design and dynamic canvas elements. I optimized the React codebase by refining component structures, implementing memoization, and enhancing state management for smooth performance across various devices and screen sizes.";
+export const foodAppLink = "https://github.com/ayushtivary/food-app";
+export const portfolioAppLink = "https://github.com/ayushtivary/portfolio";

@@ -1,6 +1,6 @@
 import React from "react";
 import { about } from "../Utils/constants";
-import img from "../Assests/profile.jpeg";
+import img from "../Assests/photo_linkedin.png";
 const Home = () => {
   const aboutText = about;
 

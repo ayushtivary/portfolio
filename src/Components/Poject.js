@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { reactPortfolio } from "../Utils/constants";
+import {
+  foodAppLink,
+  portfolioAppLink,
+  reactPortfolio,
+} from "../Utils/constants";
 import { cyber } from "../Utils/constants";
 import { V2 } from "../Utils/constants";
 import { python } from "../Utils/constants";
@@ -88,9 +92,9 @@ const Project = () => {
               <h1 className="text-2xl text-blue-200 font-bold mt-3 pt-3 text-center">
                 CyberSim (2022 - Present)
               </h1>
-              <h1 className="text-xl text-blue-200 p-10 text-justify overflow-y-auto text-ellipsis break-words">
+              <h3 className="text-xl text-blue-200 p-10 text-justify overflow-y-auto text-ellipsis break-words">
                 {cyberText}
-              </h1>
+              </h3>
             </div>
           </div>
 
@@ -146,6 +150,9 @@ const Project = () => {
               <h1 className="text-xl text-blue-200 p-10 text-justify overflow-y-auto text-ellipsis break-words">
                 {reactFoodApp}
               </h1>
+              {/* <h3>
+                {foodAppLink}
+              </h3> */}
             </div>
           </div>
 
@@ -182,6 +189,9 @@ const Project = () => {
               <h1 className="text-xl text-blue-200 p-10 text-justify overflow-y-auto text-ellipsis break-words">
                 {reactPortfolio}
               </h1>
+              {/* <h3>
+                {portfolioAppLink}
+              </h3> */}
             </div>
           </div>
         </div>
