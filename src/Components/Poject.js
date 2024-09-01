@@ -61,7 +61,7 @@ const Project = () => {
   const cyberText = cyber;
   const V2Text = V2;
   return (
-    <div className="flex justify-center items-center mt-[20rem]">
+    <div className="flex justify-center items-center mt-[17rem]">
       <div className="relative w-8/12 h-auto">
         {/* Heading component  */}
         <div

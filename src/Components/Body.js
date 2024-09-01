@@ -13,11 +13,17 @@ const Body = () => {
         <ParticleBackground />
       </div>
       {/* <Header /> */}
-      <Home />
-      <Skills />
-      <Experience />
-      <Project />
-      <Footer />
+      <div className="block lg:hidden text-blue-200 mt-5 p-4 align-middle text-center text-2xl">
+        <h1>Comming soon for Mobile and Tablets</h1>
+        <h1 className="mt-10">Please visit my website on laptop or desktop</h1>
+      </div>
+      <div className="hidden lg:block">
+        <Home />
+        <Skills />
+        <Experience />
+        <Project />
+        <Footer />
+      </div>
     </div>
   );
 };
