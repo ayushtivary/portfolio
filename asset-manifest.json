@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.3af92d02.css",
-    "main.js": "/portfolio/static/js/main.ad93268a.js",
+    "main.css": "/portfolio/static/css/main.1e0cc585.css",
+    "main.js": "/portfolio/static/js/main.7723f2bb.js",
     "static/js/488.71e63b53.chunk.js": "/portfolio/static/js/488.71e63b53.chunk.js",
     "static/media/Gemini_Logo_2.1acba111.svg": "/portfolio/static/media/Gemini_Logo_2.1acba111.7272475a08c8a21c850074349b1f623e.svg",
     "static/media/photo_linkedin.png": "/portfolio/static/media/photo_linkedin.32e972030a167a2c3808.png",
@@ -10,12 +10,12 @@
     "static/media/Git.png": "/portfolio/static/media/Git.1a3ef85994e2f936e92f.png",
     "static/media/Pyhton.png": "/portfolio/static/media/Pyhton.98d40f247c95d5c42ac7.png",
     "index.html": "/portfolio/index.html",
-    "main.3af92d02.css.map": "/portfolio/static/css/main.3af92d02.css.map",
-    "main.ad93268a.js.map": "/portfolio/static/js/main.ad93268a.js.map",
+    "main.1e0cc585.css.map": "/portfolio/static/css/main.1e0cc585.css.map",
+    "main.7723f2bb.js.map": "/portfolio/static/js/main.7723f2bb.js.map",
     "488.71e63b53.chunk.js.map": "/portfolio/static/js/488.71e63b53.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3af92d02.css",
-    "static/js/main.ad93268a.js"
+    "static/css/main.1e0cc585.css",
+    "static/js/main.7723f2bb.js"
   ]
 }
