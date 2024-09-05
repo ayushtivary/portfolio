@@ -25,7 +25,7 @@ const Home = () => {
           <div className="absolute animate-slide-in inset-0 flex flex-col justify-start items-center px-12 bg-black bg-opacity-50 shadow-lg rounded-2xl overflow-scroll">
             {/* About Section */}
             <div className="w-full relative mt-20 overflow-y-auto text-ellipsis break-words ">
-              <h3 className="text-2xl text-blue-200  px-10 text-justify space-x-10">
+              <h3 className="text-2xl text-blue-200  px-13 text-justify space-x-10">
                 {aboutText}
               </h3>
             </div>

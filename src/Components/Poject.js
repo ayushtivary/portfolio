@@ -1,9 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import {
-  foodAppLink,
-  portfolioAppLink,
-  reactPortfolio,
-} from "../Utils/constants";
+import { reactPortfolio } from "../Utils/constants";
 import { cyber } from "../Utils/constants";
 import { V2 } from "../Utils/constants";
 import { python } from "../Utils/constants";
@@ -90,7 +86,7 @@ const Project = () => {
           >
             <div className="relative w-full h-[35rem] animate-slide-in justify-center items-center text-center mt-[13%] bg-black bg-opacity-50 shadow-lg rounded-2xl overflow-scroll">
               <h1 className="text-2xl text-blue-200 font-bold mt-3 pt-3 text-center">
-                CyberSim (2022 - Present)
+                CyberSafe (2022 - Present)
               </h1>
               <h3 className="text-xl text-blue-200 p-10 text-justify overflow-y-auto text-ellipsis break-words">
                 {cyberText}
@@ -136,6 +132,7 @@ const Project = () => {
           </div>
 
           {/* Fourth Project */}
+
           <div
             className={`transition-transform duration-1000 ease-in-out transform ${
               rightVisible
@@ -145,13 +142,13 @@ const Project = () => {
           >
             <div className="relative w-full h-[30rem] animate-slide-in justify-center items-center text-center mt-[5%] bg-black bg-opacity-50 shadow-lg rounded-2xl overflow-scroll">
               <h1 className="text-2xl text-blue-200 font-bold mt-3 pt-3 text-center">
-                Food Ordering (2024)
+                Porfolio (2024)
               </h1>
               <h1 className="text-xl text-blue-200 p-10 text-justify overflow-y-auto text-ellipsis break-words">
-                {reactFoodApp}
+                {reactPortfolio}
               </h1>
               {/* <h3>
-                {foodAppLink}
+                {portfolioAppLink}
               </h3> */}
             </div>
           </div>
@@ -174,7 +171,7 @@ const Project = () => {
             </div>
           </div>
 
-          {/* Fourth Project */}
+          {/* sixth Project */}
           <div
             className={`transition-transform duration-1000 ease-in-out transform ${
               rightVisible
@@ -184,13 +181,13 @@ const Project = () => {
           >
             <div className="relative w-full h-[30rem] animate-slide-in justify-center items-center text-center mt-[5%] bg-black bg-opacity-50 shadow-lg rounded-2xl overflow-scroll">
               <h1 className="text-2xl text-blue-200 font-bold mt-3 pt-3 text-center">
-                Porfolio (2024)
+                Food Ordering (2024)
               </h1>
               <h1 className="text-xl text-blue-200 p-10 text-justify overflow-y-auto text-ellipsis break-words">
-                {reactPortfolio}
+                {reactFoodApp}
               </h1>
               {/* <h3>
-                {portfolioAppLink}
+                {foodAppLink}
               </h3> */}
             </div>
           </div>
