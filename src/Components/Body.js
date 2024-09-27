@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 const Body = () => {
   return (
-    <div className="h-screen w-screen bg-gray-900 overflow-x-auto overflow-y-auto scrollbar-hidden">
+    <div className="h-screen w-screen bg-slate-900 overflow-x-auto overflow-y-auto">
       <div>
         <ParticleBackground />
       </div>

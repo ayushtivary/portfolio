@@ -63,8 +63,8 @@ const Experience = () => {
                 : "-translate-x-full opacity-0"
             } text-center items-center `}
           >
-            <div className="-top-[40%] w-full absolute animate-slide-in justify-center items-center text-center mt-3 bg-black py-3 bg-opacity-35 rounded-full">
-              <h1 className=" text-green-200 font-bold text-3xl z-10">
+            <div className="-top-[40%] w-full absolute animate-slide-in justify-center items-center bg-black py-3 bg-opacity-80 rounded-full">
+              <h1 className="  text-yellow-400 font-bold text-3xl z-10">
                 Professional Experience
               </h1>
             </div>
@@ -79,16 +79,17 @@ const Experience = () => {
                   : "translate-x-full opacity-0"
               } text-center items-cente`}
             >
-              <div className="-top-[40%] w-full absolute animate-slide-in justify-center items-center text-center mt-[13%]  bg-black bg-opacity-50 shadow-lg rounded-2xl">
+              <div className="-top-[40%] w-full absolute animate-slide-in justify-center items-center text-center mt-[13%]  bg-black bg-opacity-80 shadow-lg rounded-2xl">
                 <img
-                  className="w-30 h-40 px-[15%] py-5 justify-center text-center items-center"
+                  className="w-30 h-40 px-[15%] py-2 justify-center text-center items-center"
                   src={geminilogo}
                   alt="gemlogo"
                 />
-                <h1 className="text-2xl text-blue-200 font-bold  p-3 text-center">
+                <h1 className="text-3xl text-cyan-100 font-bold mt-3 pt-3 text-center px-3">
                   2022 - Present
                 </h1>
-                <h1 className=" text-2xl text-blue-200 p-10 text-justify space-x-6">
+                <h1 className=" text-2xl text-gray-300 p-10 font-poppins text-justify space-x-6 ">
+                {/* font-poppins text-base text-gray-300 px-20 text-justify overflow-y-auto text-ellipsis break-words */}
                   {aboutText}
                 </h1>
               </div>

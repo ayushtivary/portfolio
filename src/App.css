@@ -12,6 +12,14 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
 
 .App-header {
   background-color: #282c34;
@@ -35,4 +43,103 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* General styling */
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  perspective: 1000px; /* Enables 3D perspective */
+}
+
+.carousel {
+  position: relative;
+  width: 400px;
+  height: 40rem;
+  transform-style: preserve-3d;
+  transition: transform 1s ease; /* Smooth rotation */
+}
+
+.carousel__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden; /* Hides the back side of the card */
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transform: rotateY(0deg) translateZ(300px); /* Front face */
+}
+
+.card {
+  width:90rem;
+  height: 550px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  margin: 45px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  padding: 10px;
+}
+
+/* Placing cards at different angles for 3D effect */
+.carousel__face:nth-child(1) {
+  transform: rotateY(0deg) translateZ(300px);
+}
+
+.carousel__face:nth-child(2) {
+  transform: rotateY(60deg) translateZ(300px);
+}
+
+.carousel__face:nth-child(3) {
+  transform: rotateY(120deg) translateZ(300px);
+}
+
+.carousel__face:nth-child(4) {
+  transform: rotateY(180deg) translateZ(300px);
+}
+
+.carousel__face:nth-child(5) {
+  transform: rotateY(240deg) translateZ(300px);
+}
+
+.carousel__face:nth-child(6) {
+  transform: rotateY(300deg) translateZ(300px);
+}
+
+/* Controls for rotating the carousel */
+.controls {
+  margin-top: 20px;
+}
+
+.rotate-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.rotate-button:hover {
+  background-color: #0056b3;
 }

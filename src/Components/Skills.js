@@ -71,8 +71,8 @@ const Skills = () => {
             : "-translate-x-full opacity-0"
         } text-center items-center w-8/12`}
       >
-        <div className="absolute animate-slide-in justify-center items-center text-center w-full mt-3 bg-black py-3 bg-opacity-35 rounded-full">
-          <h1 className="text-green-200 font-bold text-3xl z-10">
+        <div className="absolute animate-slide-in justify-center items-center text-center w-full mt-3 bg-black py-3 bg-opacity-80 rounded-full">
+          <h1 className="text-yellow-400 font-bold text-3xl z-10">
             Competencies and Knowledge
           </h1>
         </div>
@@ -99,7 +99,7 @@ const Skills = () => {
           <div className="absolute flex justify-around items-center w-full h-full">
             {/* Top Image with Text */}
             <div className="flex flex-col items-center absolute -top-[35%] left-1/2 transform -translate-x-1/2 ">
-              <h1 className="text-blue-200 text-md mb-2 z-10 bg-black bg-opacity-20 px-10 py-5 justify-around rounded-full">
+              <h1 className="text-lg text-gray-300 p-10 font-poppins  text-md mb-2 z-10 bg-black bg-opacity-80 px-10 py-5 justify-around rounded-full">
                 {AngularText}
               </h1>
               <img
@@ -112,7 +112,7 @@ const Skills = () => {
             {/* Top Right Image with Text */}
             <div className="flex items-center absolute top-[25%] right-[8%] md:right-[22%] transform -translate-x-[18%]">
               {/* Text */}
-              <h1 className="text-blue-200 text-md ml-3 md:ml-6  bg-black bg-opacity-20 px-4 py-2 w-[50%] rounded-full -mb-[10%]">
+              <h1 className="text-lg text-gray-300 p-10 font-poppins text-md ml-3 md:ml-6  bg-black bg-opacity-80  px-4 py-2 w-[50%] rounded-full -mb-[10%]">
                 {ReactText}
               </h1>
 
@@ -127,7 +127,7 @@ const Skills = () => {
             {/* Bottom Right Image with Text */}
             <div className="flex items-center absolute bottom-0 left-[17%] -top-[25%] right-[15rem] md:right-[22%] transform -translate-x-1/2 translate-y-[38%]">
               {/* Text */}
-              <h1 className="text-blue-200 text-md z-10 bg-black bg-opacity-20  px-4 py-2 w-[70%] rounded-full -mb-5">
+              <h1 className="text-lg text-gray-300 p-10 font-poppins   text-md z-10 bg-black bg-opacity-80   px-4 py-2 w-[70%] rounded-full -mb-5">
                 {gitText}
               </h1>
 
@@ -146,7 +146,7 @@ const Skills = () => {
                 src={node}
                 alt="node"
               />
-              <h1 className="text-blue-200 text-md mb-2 mt-2 z-10 bg-black bg-opacity-20 px-10 py-5 justify-around rounded-full">
+              <h1 className="text-lg text-gray-300 p-10 font-poppins  text-md mb-2 mt-2 z-10 bg-black bg-opacity-80  px-10 py-5 justify-around rounded-full">
                 {NodeText}
               </h1>
             </div>
@@ -161,7 +161,7 @@ const Skills = () => {
               />
 
               {/* Text */}
-              <h1 className="text-blue-200 text-md ml-3 md:ml-6  bg-black bg-opacity-20 px-4 py-2 w-[50%] rounded-full -mb-5">
+              <h1 className="text-lg text-gray-300 p-10 font-poppins   text-md ml-3 md:ml-6  bg-black bg-opacity-80  px-4 py-2 w-[50%] rounded-full -mb-5">
                 {AwsText}
               </h1>
             </div>
@@ -176,7 +176,7 @@ const Skills = () => {
               />
 
               {/* Text */}
-              <h1 className="text-blue-200 text-md ml-3 md:ml-6 mt-2 md:mt-0 bg-black bg-opacity-20 px-4 py-2 w-[50%] rounded-full mb-5">
+              <h1 className="text-lg text-gray-300 p-10 font-poppins  text-md ml-3 md:ml-6 mt-2 md:mt-0 bg-black bg-opacity-80  px-4 py-2 w-[50%] rounded-full mb-5">
                 {PythonText}
               </h1>
             </div>
