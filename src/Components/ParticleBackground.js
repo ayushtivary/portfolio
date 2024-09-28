@@ -140,7 +140,7 @@ const ParticleBackground = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="absolute w-screen h-screen  " />;
+  return <canvas ref={canvasRef} className="absolute w-screen h-screen overflow-y-auto " />;
 };
 
 export default ParticleBackground;

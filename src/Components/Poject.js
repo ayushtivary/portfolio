@@ -1,79 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
-import { reactPortfolio } from "../Utils/constants";
-import { cyber } from "../Utils/constants";
-import { V2 } from "../Utils/constants";
-import { python } from "../Utils/constants";
-import { reactFoodApp } from "../Utils/constants";
-import { reactNetflixGpt } from "../Utils/constants";
+import { reactPortfolio, cyber, V2, python, reactFoodApp, reactNetflixGpt } from "../Utils/constants";
+
 const Project = () => {
   const [leftVisible, setLeftVisible] = useState(false);
-  // const [rightVisible, setRightVisible] = useState(false);
   const leftRef = useRef(null);
-  // const rightRef = useRef(null);
-  useEffect(() => {
-    // observable to check if the screen is reach/scrolled to the point to be visible
-    const leftObserver = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        // check if the element can be viewd or not
-        if (entry.isIntersecting) {
-          // if we have reached the element to be viewed
-          setLeftVisible(true);
-          leftObserver.unobserve(entry.target); // stop the obervable emit
-        }
-      },
-      { threshold: 0.1 } // provide which amount to element should be considered as entry point for intersecting
-    );
-
-    // same code as above for checking element from right side of screen
-    // const rightObserver = new IntersectionObserver(
-    //   (entries) => {
-    //     const entry = entries[0];
-    //     if (entry.isIntersecting) {
-    //       setRightVisible(true);
-    //       rightObserver.unobserve(entry.target); // Stop observing once it becomes visible
-    //     }
-    //   },
-    //   { threshold: 0.1 }
-    // );
-
-    //   fetching ref of left observable and updating with left obs function which we created above
-    if (leftRef.current) {
-      leftObserver.observe(leftRef.current);
-    }
-
-    // similar to left.current we are observing update right ref
-    // if (rightRef.current) {
-    //   rightObserver.observe(rightRef.current);
-    // }
-
-    // following react lifecycle after unmounting the component we are disconnecting to prevent menory leaks, stale obs etc
-    return () => {
-      leftObserver.disconnect();
-      // rightObserver.disconnect();
-    };
-  });
-
-  
   const [angle, setAngle] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setAngle((prevAngle) => prevAngle - 60); // Rotates by 60 degrees every 15 seconds
-    }, 13000); // Auto-rotate every 3 seconds
-
-    return () => clearInterval(interval); // Clear the interval on component unmount
-  }, []);
-  const cyberText = cyber;
-  const V2Text = V2;
   const projects = [
     {
       title: "CyberSafe (2022 - 2024)",
-      description: cyberText,
+      description: cyber,
     },
     {
       title: "V2-Connect (2023 - 2024)",
-      description: V2Text,
+      description: V2,
     },
     {
       title: "Vendor Management System (2022-2023)",
@@ -89,14 +28,61 @@ const Project = () => {
     },
     {
       title: "Food Ordering (2024)",
-      description:  reactFoodApp,
+      description: reactFoodApp,
     },
   ];
+
+  const totalProjects = projects.length;
+  const rotationAngle = 360 / totalProjects; // Calculate dynamic rotation based on number of projects
+
+  useEffect(() => {
+    const leftObserver = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setLeftVisible(true);
+          leftObserver.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (leftRef.current) {
+      leftObserver.observe(leftRef.current);
+    }
+
+    return () => {
+      leftObserver.disconnect();
+    };
+  }, []);
+
+  // Auto-rotation logic every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAngle((prevAngle) => prevAngle - rotationAngle); // Auto-rotate based on the calculated angle
+    }, 10000); // 5 seconds interval
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, [rotationAngle]);
+
+  // Handle click to rotate the carousel based on where the click happens
+  const handleClick = (e) => {
+    const clickX = e.clientX;
+    const screenWidth = window.innerWidth;
+
+    if (clickX < screenWidth / 2) {
+      // Click is on the left side of the screen
+      setAngle((prevAngle) => prevAngle + rotationAngle); // Rotate left by dynamic angle
+    } else {
+      // Click is on the right side of the screen
+      setAngle((prevAngle) => prevAngle - rotationAngle); // Rotate right by dynamic angle
+    }
+  };
+
   return (
-<>
-      <div className="flex justify-center items-center mt-[15rem]">
+    <>
+      <div className="flex justify-center items-center mt-[15rem] pointer-events-none">
         <div className="relative w-8/12 h-auto">
-          {/* Heading component */}
           <div
             ref={leftRef}
             className={`transition-transform duration-1000 ease-in-out transform ${
@@ -114,7 +100,11 @@ const Project = () => {
         </div>
       </div>
 
-      <div className="carousel-container mt-[5rem] mb-[5rem]">
+      {/* Add onClick event to handle left/right click */}
+      <div
+        className="carousel-container mt-[5rem] mb-[5rem] w-full h-[500px] relative"
+        onClick={handleClick}
+      >
         <div
           className="carousel"
           style={{ transform: `rotateY(${angle}deg)` }}
@@ -122,8 +112,12 @@ const Project = () => {
           {projects.map((project, index) => (
             <div className="carousel__face" key={index}>
               <div className="card">
-                <h1 className="card-title text-lg text-cyan-100 font-bold mt-3 pt-3 text-center px-3">{project.title}</h1>
-                <p className="card-description text-2xl text-white font-poppins px-20 text-justify overflow-y-auto text-ellipsis break-words">{project.description}</p>
+                <h1 className="card-title text-lg text-cyan-100 font-bold mt-3 pt-3 text-center px-3">
+                  {project.title}
+                </h1>
+                <p className="card-description text-2xl text-white font-poppins px-20 text-justify overflow-y-auto text-ellipsis break-words">
+                  {project.description}
+                </p>
               </div>
             </div>
           ))}
