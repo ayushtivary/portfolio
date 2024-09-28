@@ -60,7 +60,7 @@ const Project = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setAngle((prevAngle) => prevAngle - rotationAngle); // Auto-rotate based on the calculated angle
-    }, 10000); // 5 seconds interval
+    }, 20000); // 20 seconds interval
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, [rotationAngle]);

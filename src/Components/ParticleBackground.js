@@ -96,8 +96,8 @@ const ParticleBackground = () => {
         x,
         y,
         size: Math.random() * 5 + 1,
-        speedX: Math.random() * 5 - 0.5,
-        speedY: Math.random() * 5 - 0.5,
+        speedX: Math.random() * 0.5,
+        speedY: Math.random() * 0.5,
       };
 
       // Add the new particle to the particles array
