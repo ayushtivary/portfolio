@@ -86,7 +86,7 @@ const Experience = () => {
                   alt="gemlogo"
                 />
                 <h1 className="text-3xl text-cyan-100 font-bold mt-3 pt-3 text-center px-3">
-                  2022 - Present
+                  2021 - Present
                 </h1>
                 <h1 className=" text-2xl text-gray-300 p-10 font-poppins text-justify space-x-6 ">
                 {/* font-poppins text-base text-gray-300 px-20 text-justify overflow-y-auto text-ellipsis break-words */}
